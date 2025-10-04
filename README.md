@@ -1,2 +1,173 @@
-# memories-with-anna
-memories
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BROTHER SISTER MEMORIES 💙💖</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #ffe6f0, #e6f7ff);
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #d63384;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto 50px auto;
+    }
+
+    .memory-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+      overflow: hidden;
+      padding: 10px;
+      transition: transform 0.5s ease;
+    }
+
+    .memory-card img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+      animation: zoomIn 5s infinite alternate;
+    }
+
+    .memory-card:hover {
+      transform: scale(1.05);
+    }
+
+    .caption {
+      margin-top: 10px;
+      font-size: 1em;
+      color: #4b0082;
+      font-weight: bold;
+      background: rgba(255,255,255,0.9);
+      padding: 8px;
+      border-radius: 8px;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(1); }
+      to { transform: scale(1.05); }
+    }
+
+    /* Video section */
+    .video-section {
+      max-width: 900px;
+      margin: 50px auto;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+    }
+
+    .video-section video {
+      width: 100%;
+      display: block;
+      border-radius: 15px;
+    }
+
+    .video-section .caption {
+      background: rgba(255,255,255,0.9);
+      padding: 15px;
+      font-size: 1.2em;
+      color: #4b0082;
+      font-weight: bold;
+      
+    }
+    .hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.heart {
+  position: absolute;
+  top: -10%;
+  color: #ff4d6d; /* pinkish-red heart */
+  font-size: 20px;
+  animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+  </style>
+</head>
+<body>
+  <h1>BROTHER SISTER MEMORIES 💙💖</h1>
+
+  <!-- Photo Grid -->
+  <div class="grid">
+    <div class="memory-card">
+      <img src="anna solo super.jpg" alt="Memory 1">
+      <div class="caption">👦👧 This was the wonderful picture of yours that i seen 🌳</div>
+    </div>
+
+    <div class="memory-card">
+      <img src="anna solo.jpg" alt="Memory 2">
+      <div class="caption">💙💖 I know u like bike and its look very cool🎉</div>
+    </div>
+
+    <div class="memory-card">
+      <img src="me with anna old.jpg" alt="Memory 3">
+      <div class="caption">🌸 This was the old photo of as infront of our car which i like the most. 🤝</div>
+    </div>
+
+    <div class="memory-card">
+      <img src="anna with me new.jpg" alt="Memory 4">
+      <div class="caption">💖 And this was the photo of us in marina beach chennai.✨</div>
+    </div>
+  </div>
+
+  <!-- Video Section -->
+  <div class="video-section">
+    <video controls>
+      <source src="anna video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="caption">🎥 Fun moments with my brother 💙💖</div>
+ 
+  <ul class="points">
+    <li>💙💖Fighting with you💙💖</li>
+    <li>💙💖Iritating and having fun with you was memorable💙💖</li>
+    <li>💙💖Recent times we didn't even speak properly and i miss those unforgettable memories and fight with u💙💖</li>
+    <li>💙💖You are my favourite and trustable person ever💙💖</li>
+    <li>💙💖Your support and care towards me is infinity da💙💖</li>
+  </ul>
+</div>
+<div class="hearts"></div>
+<script>
+    function createHeart() {
+  const heart = document.createElement('div');
+  heart.classList.add('heart');
+  heart.innerHTML = '❤'; // Heart emoji
+  heart.style.left = Math.random() * 100 + 'vw';  // Random horizontal position
+  heart.style.fontSize = Math.random() * 20 + 10 + 'px'; // Random size 10px–30px
+  document.querySelector('.hearts').appendChild(heart);
+
+  // Remove heart after animation ends (5s)
+  setTimeout(() => heart.remove(), 5000);
+}
+
+// Create a new heart every 400ms
+setInterval(createHeart, 400);
+</script>
+
+</body>
+</html>
